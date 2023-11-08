@@ -49,19 +49,20 @@
         <main class="register">
             <form class="register-form" action="/" method="POST">
 
-                <input class="box-nameReg" type="text" name="name" placeholder="Ingrese su nombre y apellido">
-                <input class="box-userReg" type="text" name="user" placeholder="Ingrese un nombre de usuario">
-                <input class="box-emailReg" type="email" name="email" placeholder="Ingrese su e-mail">
+                <input class="box-nameReg" type="text" name="name" placeholder="Ingrese su nombre y apellido" required pattern="[A-Za-z\s]{7,100}" title="Sólo debe contener letras y espacios, con una longitud entre 7 y 100 caracteres">
+                <input class="box-userReg" type="text" name="user" placeholder="Ingrese un nombre de usuario" required pattern="[A-Za-z\s]{4,20}" title="Sólo debe contener letras y espacios, con una longitud entre 4 y 20 caracteres">
+                <input class="box-emailReg" type="email" name="email" placeholder="Ingrese su e-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido - example@example.com">
                 <br>
                 
-                <input type="password" name="pass" placeholder="Elegí tu contraseña">
-                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+                <input type="password" name="pass" placeholder="Elegí tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" 
+                title="La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, una minúscula, un número y un carácter especial.">
+                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
                 <br>
                 <label for="birth_date"><b>Fecha de nacimiento</b>
                 
                     <input class="box-birthReg" type="date" name="birth_date" id="birth_date"></label><br>
                 
-                <input type="text" name="addres" placeholder="Domicilio"><br>
+                <input type="text" name="addres" placeholder="Domicilio" required><br>
 
                 <div class="profile">
                     <label for =user-profile><b>Perfil del usuario&nbsp;&nbsp;</b></label>
