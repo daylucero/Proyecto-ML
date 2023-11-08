@@ -202,16 +202,19 @@ footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: space-around;
     flex: 1 1 22%;
     margin: 5px;
     background-color: #ebebebd3;
+    border-radius: 10px;
+    padding: 5px;
     }
 
 .container-1 div i {
     font-size: 20px;
     margin-bottom: 5px; 
     color: #185ed8;
+    align-self: center;
     
 }
 
@@ -219,13 +222,12 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 5px 10px 10px 5px;
 }
 .derechos{
     color:#4f4e4e;
     align-self: flex-start;
     font-style: italic;
-
+    margin-bottom: 5px;
 }
 
 /*login y register*/
@@ -328,8 +330,9 @@ footer{
     .price,
     .discount{
         width: 50%;
+        font-size: 14px;
     }
-
+    
     header .form-search {
         width: 100%;
     }
@@ -362,8 +365,7 @@ footer{
     }
 
     .container-1 div {
-        
-        width: 95%;
+        width: 98%;
     }
     
 }
